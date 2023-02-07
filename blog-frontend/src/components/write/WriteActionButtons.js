@@ -17,11 +17,11 @@ const StyledButton = styled(Button)`
 	}
 `;
 
-const WriteActionButtons = ({ onCancel, onPublish }) => {
+const WriteActionButtons = ({ onCancel, onPublish, isEdit }) => {
 	return (
 		<WriteActionButtonsBlock>
 			<StyledButton cyan onClick={onPublish}>
-				Post
+				{isEdit ? 'Edit' : 'Post'}
 			</StyledButton>
 			<StyledButton onClick={onCancel}>Cancel</StyledButton>
 		</WriteActionButtonsBlock>
